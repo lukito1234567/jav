@@ -1,28 +1,11 @@
-let carbrand = ["ford", "Audi", "BMW", "Toyota", "Honda", "ferrari"];
-let carArray = car.length;
-let num = document.querySelector(".num");
-num.innerHTML = carArray;
+const click = document.querySelectorAll('.box');
 
-let calc = 0;
-let button1 = document.querySelector(".btn1");
-let button2 = document.querySelector(".btn2");
-let button3 = document.querySelector(".btn3");
-
-button1.addEventListener("click", () => {
-    if (calc >= 0 && calc < 10) {
-        calc++;
-        num.innerHTML = calc;
-    }
-});
-
-button2.addEventListener("click", () => {
-    calc = 0;
-    num.innerHTML = calc;
-});
-
-button3.addEventListener("click", () => {
-    if (calc > 0 && calc <= 10) {
-        calc--;
-        num.innerHTML = calc;
-    }
+click.forEach((MainClick) => {
+    MainClick.addEventListener('click' , () =>{
+        click.forEach((SecondClick) => {
+        SecondClick.style.backgroundColor = 'rgba(53, 44, 131, 0.842)';
+        });
+        MainClick.style.backgroundColor = 'rgba(39, 231, 13, 0.685';
+    
+    });
 });
