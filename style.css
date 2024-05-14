@@ -1,43 +1,86 @@
 *{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+  
+.header{
+  background-color: blue;
 }
 
-button {
-    display: flex;
-    justify-content: center;
-    padding: 10px 20px;
-    background-color: #007bff; 
-    color: #fff; 
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
 
 
-ul {
+section {
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+section ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 
-
-li {
+section ul li {
     margin-bottom: 10px;
-    padding: 5px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(238, 255, 0)
-    
-
+    font-size: 18px;
 }
 
-li:hover {
-    background-color: #e0e0e0;
-}
+.computer-box {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    float: left;
+    background-color: blue;
+  }
+  
+  .computer-box img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .computer-box h2 {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  .computer-box p {
+    margin-top: 10px;
+  }
+  
+  .computer-box button {
+    background-color: gold;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+  }
 
