@@ -1,76 +1,56 @@
 
-const products = [
-    { name: "Laptop", price: 999.99 },
-    { name: "Desktop", price: 1499.99 },
-    { name: "Accessories", price: 49.99 }
-];c
 
-function displayProducts() {
-    const productList = document.getElementById("product-list");
-    productList.innerHTML = ""; 
 
-    products.forEach(product => {
-        const listItem = document.createElement("li");
-        listItem.textContent = `${product.name} - $${product.price}`;
-        productList.appendChild(listItem);
-    });
+  class brand {
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    };
+
+    get product() {
+        return `${this.name}, ${this.price}`;
+    }
+
+    set () {
+        const [newName, newPrice] = brand .computer(',');
+        this.name = newName;
+        this.price = newPrice;
+    }
+
+    #privatebrand = '';
+
+    getbrandInfo() {
+        console.log(`name: ${this.name}`);
+        console.log(`price: ${this.price}`);
+
+        return this.#privatebrand;
+    }
 }
-const products2 = [
-    { name: "Laptop", price: 999.99 },
-    { name: "Desktop", price: 1499.99 },
-    { name: "Accessories", price: 49.99 }
-];c
-window.onload = displayProducts;
+const brand = new brand('asus', '1000$');
+const brandTwo = new brand('acer', '100$');
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    
-    var computers = [
-        {
-            name: "asus",
-            image: "computer1.jpg",
-            description: "Description of Computer 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            price: "$999.99"
-        },
-        {
-            name: "acer",
-            image: "computer2.jpg",
-            description: "Description of Computer 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            price: "$799.99"
-        }
-    
-    ];
+brand.asus = 'pc, 3000';
 
-    var computerContainer = document.getElementById("computer-container");
+console.log(brand.getbrandInfo());
+console.log(foodTwo.getbrandInfo());
 
-    
-    computers.forEach(function(computer) {
-        var computerBox = document.createElement("div");
-        computerBox.className = "computer-box";
+const element = document.createElement('h1');
+const element1 = document.createElement('h1');
 
-        var image = document.createElement("img");
-        image.src = computer.image;
-        image.alt = computer.name;
+document.body.appendChild(element);
+document.body.appendChild(element1);
 
-        var heading = document.createElement("h2");
-        heading.textContent = computer.name;
+element.textContent = `${brand.name} - ${brand.price} `;
+element1.textContent = `${brandTwo.name} - ${brandTwo.price}`;
 
-        var description = document.createElement("p");
-        description.textContent = computer.description;
 
-        var price = document.createElement("p");
-        price.textContent = computer.price;
 
-        var button = document.createElement("button");
-        button.textContent = "Add to Cart";
 
-        computerBox.appendChild(image);
-        computerBox.appendChild(heading);
-        computerBox.appendChild(description);
-        computerBox.appendChild(price);
-        computerBox.appendChild(button);
 
-        computerContainer.appendChild(computerBox);
-    });
-});
+
+
+
+
+
 
